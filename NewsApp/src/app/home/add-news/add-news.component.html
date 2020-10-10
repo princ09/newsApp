@@ -1,0 +1,60 @@
+<form [formGroup]="publishedAt.form" class="normal-form" (submit)="addNews()">
+  <div class="controlers-container">
+      <p>
+          <mat-form-field class="example-full-width" style="width:50vw">
+              <mat-label>Source Name</mat-label>
+              <input matInput placeholder="Ex. India Press" formControlName="sourcename" >
+              <mat-error>Invalid Source Name</mat-error>
+          </mat-form-field>
+      </p>
+      <p>
+          <mat-form-field class="example-full-width" style="width:50vw">
+              <mat-label>Description</mat-label>
+              <input matInput placeholder="Ex.Bla bla bla.."  formControlName="description" >
+              <mat-error>Invalid News Description</mat-error>
+          </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="example-full-width" style="width:50vw">
+            <mat-label>Author</mat-label>
+            <input matInput placeholder="Ex.Bla bla bla.."  formControlName="author" >
+            <mat-error>Invalid News author</mat-error>
+        </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="example-full-width" style="width:50vw">
+          <mat-label>Title</mat-label>
+          <input matInput placeholder="Ex.Bla bla bla.."  formControlName="title" >
+          <mat-error>Invalid News title</mat-error>
+      </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field class="example-full-width" style="width:50vw">
+        <mat-label>Description</mat-label>
+        <input matInput placeholder="Ex.Bla bla bla.."  formControlName="description" >
+        <mat-error>Invalid News Description</mat-error>
+    </mat-form-field>
+</p>
+<p>
+  <mat-form-field class="example-full-width" style="width:50vw">
+      <mat-label>Image Link</mat-label>
+      <input matInput placeholder="Ex.Bla bla bla.."  formControlName="urlToImage" >
+      <mat-error>Invalid News urlToImage</mat-error>
+  </mat-form-field>
+</p>
+<p>
+  <mat-form-field class="example-full-width" style="width:50vw">
+      <mat-label>publishedAt</mat-label>
+      <input matInput placeholder="Ex.Bla bla bla.."  formControlName="publishedAt" >
+      <mat-error>Invalid News publishedAt</mat-error>
+  </mat-form-field>
+</p>
+      <div class="example-button-row">
+          <button mat-raised-button style="margin-left: 5px;" 
+          color="primary" type="submit" [disabled]="publishedAt.form.invalid">Add Goal</button>
+          <button mat-raised-button   style="margin-left: 5px;" color="warn" type="clear" (click)="onClear()">Reset</button>
+          <button mat-raised-button  style="margin-left: 5px;" (click)="onNoClick()">No Thanks</button>
+      </div>
+  </div>
+  
+</form>
